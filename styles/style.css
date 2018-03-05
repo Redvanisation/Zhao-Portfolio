@@ -1,0 +1,135 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  background-color: rgb(9,9,8);
+  color: #F5F5F5;
+  height: 100%;
+  width: 100%;
+}
+
+.anim, .anim svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.anim path {
+  stroke-width: 2;
+  position: relative;
+  z-index: -1;
+}
+	
+.landing {
+		height: 100vh;
+		color: black;
+		padding-top: 10%;
+		color: #F5F5F5;
+		font-family: 'Open Sans', sans-serif;
+		position: fixed;
+		z-index: 3;
+	}
+
+a {
+		color: #F5F5F5;
+		text-decoration: none;
+}
+
+.lading-text {
+		position: relative;
+		margin: 0 auto 0 auto;
+		z-index: 1;
+		padding: 2rem 4rem;
+		width: auto;
+		height: auto;
+		z-index: 2;
+		background-color: rgba(9,9,8,0.8);
+		border-radius: 20px;
+
+}
+
+.header {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+.description-text {
+		margin-bottom: 3rem;
+	}
+
+.shadow {
+		text-shadow: 2px 2px 3px rgba(235,237,236, 0.3);
+	}
+
+/*----- BUTTON CSS ------*/
+
+button {
+  position: relative;
+  //display:block;
+  height: 70px;
+  width: 220px;
+  margin: 10px 7px;
+  padding: 5px 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #F5F5F5;
+  border: 2px #F5F5F5 solid;
+  border-radius: 30px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.01s ease-in;
+  -o-transition:      0.02s ease-in;
+  -ms-transition:     0.02s ease-in;
+  -moz-transition:    0.02s ease-in;
+  -webkit-transition: 0.02s ease-in;
+}
+
+
+.slide:after{
+  content:"Interested ?";
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  text-align:center;
+  -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+}
+
+.slide:before {
+  content:"Continue →";
+  height:100%;
+  width:100%;
+  position:absolute;
+  color: #EBEDEC;
+  left:-100%;
+  opacity: 0;
+  -webkit-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+}
+
+.slide:hover{
+  background:#F5F5F5;
+}
+
+.slide:hover:before{
+  left:0;
+  opacity:1;
+  color:black;
+}
+.slide:hover:after{
+  left:100%;
+  opacity:0;
+}
